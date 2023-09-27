@@ -1,7 +1,7 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
         int k = 1;
-        for(int i = 1; i < nums.length; i++){
+        for(int i = 1; i < nums.length; i++){            
             if(swap(nums, i) == 1){
                 k++;
             }else{
@@ -15,6 +15,9 @@ class Solution {
         int beforeElement = nums[index-1];
         for(int i = index; i < nums.length; i++){
             if(nums[i] > beforeElement){
+                if(i == index){
+                    return 1;
+                }    
                 int temp = nums[i];
                 nums[i] = nums[index];
                 nums[index] = temp;
