@@ -1,21 +1,22 @@
 class Solution {
     public void setZeroes(int[][] matrix) {
-        ArrayList<Integer> rowArr = new ArrayList<>();
-        ArrayList<Integer> colArr = new ArrayList<>();
+        int rowSize = matrix.length;
+        int colSize = matrix[0].length;
+        byte [] rowArr = new byte[rowSize];
+        byte [] colArr = new byte[colSize];
 
-        for(int i = 0; i < matrix.length; i++){
-            for(int j = 0; j < matrix[0].length; j++){
+        for(int i = 0; i < rowSize; i++){
+            for(int j = 0; j < colSize; j++){
                 if (matrix[i][j] == 0){
-                    colArr.add(j);
-                    if(!rowArr.contains(i))
-                        rowArr.add(i);
+                    if (rowArr[i] == 0) rowArr[i] = 1;
+                    colArr[j] = 1;
                 }
             }
         }
 
-        for(int i = 0; i < matrix.length; i++){
-            for(int j = 0; j < matrix[0].length; j++){
-                if (rowArr.contains(i) || colArr.contains(j)){
+        for(int i = 0; i < rowSize; i++){
+            for(int j = 0; j < colSize; j++){
+                if (rowArr[i] == 1 || colArr[j] == 1){
                     matrix[i][j] = 0;
                 }
             }
