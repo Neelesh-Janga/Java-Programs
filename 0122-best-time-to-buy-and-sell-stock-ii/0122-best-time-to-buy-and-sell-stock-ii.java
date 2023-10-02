@@ -1,6 +1,5 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        int max = prices[0];
         int min = Integer.MAX_VALUE;
         int result = 0;
 
