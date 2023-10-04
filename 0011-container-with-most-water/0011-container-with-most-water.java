@@ -5,12 +5,15 @@ class Solution {
         int left = 0, right = height.length-1;
 
         while(left < right){        
-            int currentArea =  (height[left] < height[right] ? height[left++] : height[right--]) * (right - left + 1);
+
+            int currentArea =  (height[left] < height[right] ? height[left++] : height[right--]) 
+            * (right - left + 1);
+
             if(currentArea > max){
                 max = currentArea;
             }
         }
-
+        System.gc();
         return max;
     }
 }
