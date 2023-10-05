@@ -27,7 +27,7 @@ class Solution {
 
             i = map.get(nums[i]);
         }
-
+        System.gc();
         return result;
     }
 }
