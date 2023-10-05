@@ -14,8 +14,6 @@ class Solution {
                 continue;
             }
             
-            int pastLeftOccurance, pastRightOccurance;
-            
             for(int j = i+1, k = nums.length-1; j < k; ){
                 
                 int sum = nums[i] + nums[j] + nums[k];
@@ -28,11 +26,18 @@ class Solution {
                 }
                 else{
                     result.add(Arrays.asList(nums[i], nums[j], nums[k]));
-                    pastLeftOccurance = nums[j++];
-                    pastRightOccurance = nums[k--];
 
-                    while(j < k && nums[j] == pastLeftOccurance) j++;
-                    while(j < k && nums[k] == pastRightOccurance) k--;
+                    while(j < k){
+                        j++;
+                        if(nums[j] != nums[j-1])
+                            break;
+                    }
+
+                    while(j < k){
+                        k--;
+                        if(nums[k] != nums[k+1])
+                            break;
+                    }
                 }
             }
         }
