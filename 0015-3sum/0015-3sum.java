@@ -37,7 +37,6 @@ class Solution {
                 }
             }
         }
-        
         return result;
     }
 }
