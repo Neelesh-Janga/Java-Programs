@@ -42,8 +42,6 @@ class Solution {
             }
         }
         
-        System.gc();
-        
         return result;
     }
 }
