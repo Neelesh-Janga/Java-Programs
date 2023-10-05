@@ -1,6 +1,8 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
+        
         List<List<Integer>> result = new ArrayList<>();
+        
         Arrays.sort(nums);
 
         for(int i = 0; i < nums.length-2; i++){
@@ -12,8 +14,10 @@ class Solution {
                 continue;
             }
             
-            int pastLeftOccurance = nums[i+1], pastRightOccurance = nums[nums.length-1];
+            int pastLeftOccurance, pastRightOccurance;
+            
             for(int j = i+1, k = nums.length-1; j < k; ){
+                
                 int sum = nums[i] + nums[j] + nums[k];
 
                 if (sum < 0){
@@ -30,10 +34,11 @@ class Solution {
                     while(j < k && nums[j] == pastLeftOccurance) j++;
                     while(j < k && nums[k] == pastRightOccurance) k--;
                 }
-
             }
         }
+
         System.gc();
+        
         return result;
     }
 }
