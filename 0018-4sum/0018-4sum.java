@@ -6,14 +6,28 @@ public class Solution {
 
 		Arrays.sort(nums);
 
+        long negativeSum = 0;
+        long positiveSum = 0;
+
+        for(int i = 0; i < nums.length; i++){
+            if (nums[i] < 0) negativeSum += nums[i];
+            else positiveSum += nums[i];
+        }
+
 		for (int i = 0; i < nums.length - 3; i++) {
 
-			if (target > 0 && nums[0] > 0 && nums[0] > target)
+            if (target > 0 && nums[0] > 0 && nums[0] > target)
 				return result;
 
 			if (target < 0 && nums[0] > 0)
 				return result;
 			
+            if (target > 0 && target > positiveSum)
+				return result;
+						
+            if (target < 0 && target < negativeSum)
+				return result;
+
 			if (i > 0 && nums[i] == nums[i - 1])
 				continue;
 
