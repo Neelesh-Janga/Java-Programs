@@ -1,7 +1,6 @@
 public class Solution {
 	
     public static List<List<Integer>> fourSum(int[] nums, int target) {
-
 		List<List<Integer>> result = new ArrayList<>();
 
 		Arrays.sort(nums);
