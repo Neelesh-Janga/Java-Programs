@@ -5,13 +5,13 @@ public class Solution {
 		List<List<Integer>> result = new ArrayList<>();
 		Arrays.sort(nums);
 
-        long negativeSum = 0;
-        long positiveSum = 0;
+        // long negativeSum = 0;
+        // long positiveSum = 0;
 
-        for(int i = 0; i < nums.length; i++){
-            if (nums[i] < 0) negativeSum += nums[i];
-            else positiveSum += nums[i];
-        }
+        // for(int i = 0; i < nums.length; i++){
+        //     if (nums[i] < 0) negativeSum += nums[i];
+        //     else positiveSum += nums[i];
+        // }
 
 		for (int i = 0; i < nums.length - 3; i++) {
 
@@ -21,11 +21,11 @@ public class Solution {
 			if (target < 0 && nums[0] > 0)
 				return result;
 			
-            if (target > 0 && target > positiveSum)
-				return result;
+            // if (target > 0 && target > positiveSum)
+			// 	return result;
 						
-            if (target < 0 && target < negativeSum)
-				return result;
+            // if (target < 0 && target < negativeSum)
+			// 	return result;
 
 			if (i > 0 && nums[i] == nums[i - 1])
 				continue;
@@ -67,7 +67,7 @@ public class Solution {
 			}
 		}
 
-		System.gc();
+		// System.gc();
 
 		return result;
 	}
