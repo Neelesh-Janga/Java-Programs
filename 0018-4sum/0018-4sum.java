@@ -68,7 +68,7 @@ public class Solution {
 			}
 		}
 
-		// System.gc();
+		System.gc();
 
 		return result;
 	}
