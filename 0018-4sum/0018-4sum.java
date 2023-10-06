@@ -24,7 +24,7 @@ public class Solution {
 				int l = nums.length - 1;
 				while (k < l) {
 
-					long sum = nums[i] + nums[j] + nums[k] + nums[l];
+					int sum = nums[i] + nums[j] + nums[k] + nums[l];
 
 					if (sum == target) {
 						result.add(Arrays.asList(nums[i], nums[j], nums[k], nums[l]));
