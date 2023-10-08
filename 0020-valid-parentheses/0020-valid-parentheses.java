@@ -16,7 +16,7 @@ class Solution {
             if(token == '}' || token == ']' || token == ')'){
                 if(k < 0)
                     return false;
-                    
+
                 char c = arr[k];
                 if((token == ')' && c == '(') || (token == ']' && c == '[') || (token == '}' && c == '{')) {
                     k--;
@@ -25,6 +25,8 @@ class Solution {
                 }
             }
         }
+
+        System.gc();
 
         return k == -1 ? true : false;
     }
