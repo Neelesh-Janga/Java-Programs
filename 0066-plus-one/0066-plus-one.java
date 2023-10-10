@@ -22,6 +22,7 @@ class Solution {
             return newDigits;
         }
 
+        System.gc();
         return digits;
     }
 }
