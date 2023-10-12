@@ -6,17 +6,17 @@ class Solution {
                 continue;
             }else{
                 return 
-                isPalindrome(s.substring(0, i) + s.substring(i+1, s.length())) 
+                isPalindrome(s, i, j-1) 
                 || 
-                isPalindrome(s.substring(0, j) + s.substring(j+1, s.length()));
+                isPalindrome(s, i+1, j);
             }
         }
 
         return true;
     }
 
-    public boolean isPalindrome(String s){
-        for(int i = 0, j = s.length()-1; i < j; i++, j--){
+    public boolean isPalindrome(String s, int left, int right){
+        for(int i = left, j = right; i < j; i++, j--){
             if(s.charAt(i) != s.charAt(j))
                 return false;
         }
