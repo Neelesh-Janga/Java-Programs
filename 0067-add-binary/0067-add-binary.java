@@ -5,7 +5,9 @@ class Solution {
         for(
             int p1 = a.length()-1, p2 = b.length()-1, carry = 0; 
             p1 >= 0 || p2 >= 0 || carry == 1; 
-            p1--, p2--){
+            p1--, p2--)
+            {
+
             // '0' - 48, '1' - 49, '2' - 
             char c1 = (p1 >= 0 ? a.charAt(p1) : '0');
             char c2 = (p2 >= 0 ? b.charAt(p2) : '0');
@@ -21,7 +23,6 @@ class Solution {
             }
         }
 
-        System.gc();
         return res.reverse().toString();
     }
 }
