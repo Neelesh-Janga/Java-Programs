@@ -21,6 +21,7 @@ class Solution {
             }
         }
 
+        System.gc();
         return res.reverse().toString();
     }
 }
