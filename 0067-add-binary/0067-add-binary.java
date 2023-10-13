@@ -1,29 +1,26 @@
 class Solution {
     public String addBinary(String a, String b) {
-        int carry = 0;
-        int p1 = a.length()-1;
-        int p2 = b.length()-1;
-        String res = "";
+        StringBuffer res = new StringBuffer();
 
-        while(p1 >= 0 || p2 >= 0 || carry == 1){
+        for(
+            int p1 = a.length()-1, p2 = b.length()-1, carry = 0; 
+            p1 >= 0 || p2 >= 0 || carry == 1; 
+            p1--, p2--){
             // '0' - 48, '1' - 49, '2' - 
             char c1 = (p1 >= 0 ? a.charAt(p1) : '0');
             char c2 = (p2 >= 0 ? b.charAt(p2) : '0');
             
             int sum = c1 + c2 + carry;
             
-            if(sum > 48 + 49){
+            if(sum > 97){
+                res.append((sum - 98));
                 carry = 1;
-                res = (sum - 2 * 49) + res;
             }else {
+                res.append((sum - 96));
                 carry = 0;
-                res = (sum - 2 * 48) + res;
             }
-
-            p1--;
-            p2--;
         }
 
-        return res;
+        return res.reverse().toString();
     }
 }
