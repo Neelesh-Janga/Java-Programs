@@ -3,8 +3,12 @@ class Solution {
         if(n <= 1){
             return n == 1 ? true : false;
         }else{
-            double res = Math.log10((long)n) / Math.log10(2);
-            return res == (long)res ? true : false;
+            return 
+            Math.log10((long)n) / Math.log10(2) 
+            == 
+            (long)(Math.log10((long)n) / Math.log10(2)) 
+            ? 
+            true : false;
         }
     }
 }
