@@ -1,41 +1,41 @@
 class Solution {
     public int maximumProduct(int[] nums) {
         
-        Arrays.sort(nums);
+        int n1 = Integer.MAX_VALUE, n2 = 0, n3 = 0; 
+        int p1 = Integer.MIN_VALUE, p2 = 0, p3 = 0;
 
-        int a = nums[0] * nums[1] * nums[2];
-        int b = nums[0] * nums[1] * nums[nums.length-1];
-        int c = nums[nums.length-1] * nums[nums.length-2] * nums[nums.length-3];
-        int d = nums[nums.length-1] * nums[nums.length-2] * nums[0];
+        for(int i = 0; i < nums.length; i++){
+            // For Negative Numbers
+            if(nums[i] < n1){
+                n3 = n2;
+                n2 = n1;
+                n1 = nums[i];
+            }else if(nums[i] < n2){
+                n3 = n2;
+                n2 = nums[i];
+            }else if(nums[i] < n3){
+                n3 = nums[i];
+            }
 
-        if(a > b){
-            if(a > c){
-                if(a > d){
-                    return a;
-                }else{
-                    return d;
-                }
-            }else{
-                if(c > d){
-                    return c;
-                }else{
-                    return d;
-                }
+            // For Positive Numbers
+            if(nums[i] > p1){
+                p3 = p2;
+                p2 = p1;
+                p1 = nums[i];
+            }else if(nums[i] > p2){
+                p3 = p2;
+                p2 = nums[i];
             }
-        }else{
-            if(b > c){
-                if(b > d){
-                    return b;
-                }else{
-                    return d;
-                }
-            }else{
-                if(c > d){
-                    return c;
-                }else{
-                    return d;
-                }
+            else if(nums[i] > p3){
+                p3 = nums[i];
             }
-        }        
+        }
+
+        if(p1 == Integer.MIN_VALUE)
+            return n1 * n2 * n3;
+        if(n1 == Integer.MAX_VALUE)
+            return p1 * p2 * p3;
+
+        return Math.max(p1 * p2 * p3, n1 * n2 * p1);
     }
 }
