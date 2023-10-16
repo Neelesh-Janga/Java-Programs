@@ -4,6 +4,14 @@ class Solution {
         int n1 = Integer.MAX_VALUE, n2 = 0, n3 = 0; 
         int p1 = Integer.MIN_VALUE, p2 = 0, p3 = 0;
 
+        // Roles:
+        // p1 - a Largest Negative Number or a Largest Postivie Number
+        // p2 - 2nd Largest Positive Number
+        // p2 - 3rd Largest Positive Number
+        // n1 - a Smallest Negative Number or a Smallest Positive Number
+        // n2 - 2nd Smallest Negative Number
+        // n2 - 3rd Smallest Negative Number
+
         for(int i = 0; i < nums.length; i++){
             // For Negative Numbers
             if(nums[i] < n1){
