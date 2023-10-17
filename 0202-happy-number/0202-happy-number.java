@@ -1,16 +1,14 @@
 class Solution {
     public boolean isHappy(int n) {
-        if (n == 1) return true;
+        int fastSum = n;
+        int slowSum = n;
 
-        ArrayList<Integer> list = new ArrayList<>();
+        do{
+            fastSum = calculateSum(calculateSum(fastSum));
+            slowSum = calculateSum(slowSum);
+            if(slowSum == 1 || fastSum == 1) return true;
+        }while (fastSum != slowSum);
 
-        int sum = calculateSum(n);
-        
-        while(!list.contains(sum)){
-            list.add(sum);
-            if(sum == 1) return true;
-            sum = calculateSum(sum);
-        }
         return false;
     }
 
