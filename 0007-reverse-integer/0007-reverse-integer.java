@@ -12,6 +12,6 @@ class Solution {
             return 0;
         }
 
-        return (int)(res);
+        return (int) res;
     }
 }
