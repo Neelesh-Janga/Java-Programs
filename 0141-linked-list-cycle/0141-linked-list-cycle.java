@@ -15,7 +15,6 @@ public class Solution {
         ListNode fast = head;
 
         if(head == null) return false;
-        if(head.next == null) return false;
 
         do{
             slow = slow.next;
