@@ -45,6 +45,11 @@ class Solution {
 
         if(head2 != null) previous.next = head2;
 
+        previous = null;
+        head2 = null;
+        head1 = null;
+        list2 = null;
+
         return list1;
     }
 }
