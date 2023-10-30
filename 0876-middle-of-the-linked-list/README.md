@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/middle-of-the-linked-list">908. Middle of the Linked List</a></h2><h3>Easy</h3><hr><p>Given the <code>head</code> of a singly linked list, return <em>the middle node of the linked list</em>.</p>
+<h2><a href="https://leetcode.com/problems/middle-of-the-linked-list">876. Middle of the Linked List</a></h2><h3>Easy</h3><hr><p>Given the <code>head</code> of a singly linked list, return <em>the middle node of the linked list</em>.</p>
 
 <p>If there are two middle nodes, return <strong>the second middle</strong> node.</p>
 
