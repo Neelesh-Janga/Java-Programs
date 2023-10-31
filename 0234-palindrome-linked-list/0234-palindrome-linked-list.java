@@ -24,8 +24,6 @@ class Solution {
 
         boolean evenNodeCheck;
 
-        head = null;
-
         while(true){
             if(fast.next == null || fast.next.next == null){
                 evenNodeCheck = fast.next == null ? false : true;
@@ -41,12 +39,9 @@ class Solution {
             nextNode = nextNode.next;
         }
 
-        fast = null;
-
         if(evenNodeCheck){
             slow.next = prev;
             prev = slow;
-            slow = null;
         }
 
         while(prev != null && nextNode != null){
@@ -54,7 +49,11 @@ class Solution {
             prev = prev.next;
             nextNode = nextNode.next;
         }
-        
+
+        fast = null;
+        slow = null;
+        head = null;
+
         return true;
     }
 }
