@@ -9,23 +9,22 @@
  * }
  */
 class Solution {
-    private ListNode headB = null;
-    private boolean check;
-
     public boolean isPalindrome(ListNode head) {
-        this.headB = head;
-        this.check = true;
-        isPalindromeTrue(head);
-        return this.check;
-    }
-
-    public void isPalindromeTrue(ListNode headA) {
-        if(headA != null){
-            isPalindromeTrue(headA.next);
-            if(headA.val != headB.val) {
-                this.check = false;
-            }
-            this.headB = this.headB.next;
+        ListNode headPtr = head;
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        while(headPtr != null){
+            list.add(headPtr.val);
+            headPtr = headPtr.next;
         }
+        
+        headPtr = head;
+
+        for(int i = list.size()-1; i >= 0; i--){
+            if(headPtr.val != list.get(i)) return false;
+            headPtr = headPtr.next;
+        }
+
+        return true;
     }
 }
