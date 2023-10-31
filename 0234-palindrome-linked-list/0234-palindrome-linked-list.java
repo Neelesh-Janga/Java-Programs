@@ -49,6 +49,8 @@ class Solution {
             nextNode = nextNode.next;
         }
 
+        fast = null;
+        slow = null;
         return true;
     }
 }
