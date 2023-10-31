@@ -51,6 +51,9 @@ class Solution {
 
         fast = null;
         slow = null;
+        head = null;
+
+        System.gc();
         return true;
     }
 }
