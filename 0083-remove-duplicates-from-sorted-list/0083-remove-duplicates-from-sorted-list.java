@@ -12,28 +12,23 @@ class Solution {
     public ListNode deleteDuplicates(ListNode head) {        
         if(head == null || head.next == null) return head;
 
-        ListNode prev = head;
-        ListNode follow = head;
-        ListNode current = head.next;
-        
-        while(current != null){
-            if(current.val != prev.val){
-                prev.next = current;
-                if(follow != prev)
-                    follow.next = null;
-                prev = current;
+        ListNode newHead = new ListNode();
+        ListNode newHeadPtr = newHead;
+        newHead.val = head.val;
+        head = head.next;
+
+        while(head != null){
+            if(newHead.val != head.val){
+                newHead.next = new ListNode();
+                newHead = newHead.next;
+                newHead.val = head.val;
             }
-            follow = current;
-            current = current.next;
+
+            head = head.next;
         }
 
-        if(follow != prev)
-            follow.next = null;
-        follow = null;
+        System.gc();
 
-        prev.next = current;
-        prev = current;
-
-        return head;
+        return newHeadPtr;
     }
 }
