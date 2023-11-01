@@ -9,8 +9,7 @@
  * }
  */
 class Solution {
-    public ListNode deleteDuplicates(ListNode head) {
-        
+    public ListNode deleteDuplicates(ListNode head) {        
         if(head == null || head.next == null) return head;
 
         ListNode prev = head;
@@ -28,7 +27,6 @@ class Solution {
         prev.next = current;
         prev = current;
 
-        System.gc();
         return head;
     }
 }
