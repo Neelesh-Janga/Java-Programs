@@ -10,26 +10,8 @@
  */
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-
-        if(head == null) return null;
-
-        ListNode res = null;
-        ListNode current = null;
-
-        while(head != null){
-            if(head.val != val){
-                ListNode node = new ListNode(head.val, null);
-                if(res == null) {
-                    res = node;
-                    current = node;
-                }else{
-                    current.next = node;
-                    current = node;
-                }
-            }
-            head = head.next;
-        }
-
-        return res;
+        if (head == null) return null;
+        head.next = removeElements(head.next, val);
+        return head.val == val ? head.next : head;
     }
 }
