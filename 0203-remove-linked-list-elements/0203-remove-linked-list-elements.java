@@ -36,6 +36,7 @@ class Solution {
             }
         }
 
+        follow = null;
         return head;
     }
 }
