@@ -1,6 +1,7 @@
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        if(nums.length == 0 || target < nums[0]) return 0;
+        if(nums.length == 0) return 0;
+        else if(target < nums[0]) return 0;
         else if(target > nums[nums.length-1]) return nums.length;
         
         int index = -1;
