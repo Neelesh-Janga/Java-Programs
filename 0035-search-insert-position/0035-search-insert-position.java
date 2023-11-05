@@ -8,7 +8,7 @@ class Solution {
         
         for(int i = 0; i < nums.length; i++){
             if(nums[i] == target) return i;
-            if(target < nums[i] && index == -1) index = i; 
+            else if(target < nums[i] && index == -1) index = i; 
         }
 
         return index;
