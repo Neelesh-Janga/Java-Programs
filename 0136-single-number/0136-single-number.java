@@ -1,21 +1,14 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Arrays.sort(nums);
 
-        for(int i = 0; i < nums.length; i++){
-            if(map.containsKey(nums[i])){
-                map.put(nums[i], map.get(nums[i]) + 1);
-            }else{
-                map.put(nums[i], 1);
-            }
-        }
-
-        for(int i = 0; i < nums.length; i++){
-            if(map.get(nums[i]) == 1){
+        for(int i = 0; i < nums.length-1; i += 2){
+            if(nums[i] == nums[i + 1])
+                continue;
+            else 
                 return nums[i];
-            }
         }
 
-        return 0;
+        return nums[nums.length-1];
     }
 }
