@@ -1,4 +1,11 @@
-<h2><a href="https://leetcode.com/problems/middle-of-the-linked-list">876. Middle of the Linked List</a></h2><h3>Easy</h3><hr><p>Given the <code>head</code> of a singly linked list, return <em>the middle node of the linked list</em>.</p>
+<h2><a href="https://leetcode.com/problems/middle-of-the-linked-list">876. Middle of the Linked List</a></h2>
+<h3>
+	I invite you to read complete step-by-step detailed solution here ➡️ 
+	<a href="https://medium.com/@Neelesh-Janga/q-876-leetcode-finding-the-middle-node-in-a-linked-list-a-two-pointer-approach-in-java-17a29db5310c">Medium Article</a>
+</h3>
+<hr>
+<h3>Easy</h3>
+<hr><p>Given the <code>head</code> of a singly linked list, return <em>the middle node of the linked list</em>.</p>
 
 <p>If there are two middle nodes, return <strong>the second middle</strong> node.</p>
 
