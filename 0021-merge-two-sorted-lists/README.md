@@ -2,7 +2,7 @@
 
 <h3>
 	I invite you to read complete step-by-step detailed solution here ➡️ 
-	<a href="https://medium.com/@Neelesh-Janga/merging-two-sorted-linked-lists-efficiently-simplest-solution-in-java-f11f2ee27e68">Medium Article</a>
+	<a href="https://medium.com/@Neelesh-Janga/merging-two-sorted-linked-lists-efficiently-simplest-solution-in-java-f11f2ee27e68">Medium Article</a> 
 </h3>
 <hr>
 <h3>Easy</h3><hr><p>You are given the heads of two sorted linked lists <code>list1</code> and <code>list2</code>.</p>
