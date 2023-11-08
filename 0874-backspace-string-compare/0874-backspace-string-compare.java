@@ -24,12 +24,6 @@ class Solution {
 
         if(sPtr != tPtr) return false;
 
-        while(sPtr >= 0){
-            if(sbS.charAt(sPtr) != sbT.charAt(tPtr)) return false;
-            sPtr--;
-            tPtr--;
-        }
-
-        return true;
+        return (sbS.substring(0, sPtr+1)).equals(sbT.substring(0, tPtr+1));
     }
 }
