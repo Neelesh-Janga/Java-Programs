@@ -2,14 +2,14 @@ public class Solution {
     // you need treat n as an unsigned value
     public int reverseBits(int n) 
     {
-        int res = 0;
+        long res = 0;
 
         for(int i = 0; i < 32; i++){
-            res <<= 1;
-            res += (n & 1);
+            System.out.print(n&1);
+            res += Math.pow(2, 31-i) * (n & 1);
             n >>= 1;
         }
 
-        return res;
+        return (int)res;
     }
 }
