@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/backspace-string-compare">874. Backspace String Compare</a></h2><h3>Easy</h3><hr><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> <em>if they are equal when both are typed into empty text editors</em>. <code>&#39;#&#39;</code> means a backspace character.</p>
+<h2><a href="https://leetcode.com/problems/backspace-string-compare">844. Backspace String Compare</a></h2><h3>Easy</h3><hr><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> <em>if they are equal when both are typed into empty text editors</em>. <code>&#39;#&#39;</code> means a backspace character.</p>
 
 <p>Note that after backspacing an empty text, the text will continue empty.</p>
 
