@@ -8,7 +8,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class Solution { 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode list = new ListNode();
         ListNode head = list;
