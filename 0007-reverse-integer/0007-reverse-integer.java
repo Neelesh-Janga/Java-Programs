@@ -8,9 +8,7 @@ class Solution {
             x /= 10;
         }
 
-        if(res > Integer.MAX_VALUE || res < Integer.MIN_VALUE){
-            return 0;
-        }
+        if(res > Integer.MAX_VALUE || res < Integer.MIN_VALUE) return 0;
 
         return (int) res;
     }
