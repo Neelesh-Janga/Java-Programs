@@ -5,7 +5,7 @@ class Solution {
         
         if(x == 0 || x == 1) return x;
 
-        long high = x/2 + 1;
+        long high = (x >> 1) + 1;
         long low = 1;
 
         while(high - low != 1){
