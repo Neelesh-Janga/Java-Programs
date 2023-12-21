@@ -1,7 +1,6 @@
 class MyStack {
 
     private ArrayList<Integer> queue;
-    int low = -1;
     int high = -1;
 
     public MyStack() {
